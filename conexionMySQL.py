@@ -11,7 +11,6 @@ class connexionDB:
         )
 
         self.cursor = conexion.cursor()
-        print("conexion exitosa")
 
 
     def Agregar(self,nombre,telefono,compañia,direccion):
@@ -79,6 +78,16 @@ class connexionDB:
 
          try:
              self.cursor.execute(sql)
+             contacto = self.cursor.fetchall()
+
+
+             for mostrar in contacto:
+                 print('ID:', mostrar[0])
+                 print('Nombre:', mostrar[1])
+                 print('telefono:', mostrar[2])
+                 print('compañia:', mostrar[3])
+                 print('Direccion:', mostrar[4])
+                 print('----------\n')
             
              return True
          

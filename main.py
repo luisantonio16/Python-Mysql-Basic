@@ -47,7 +47,7 @@ def menu_principal():
            
                  
 
-         #opciones del menu
+       
          elif opcion == 2:
              database.listar_contactos()
              print("\n")
@@ -89,9 +89,9 @@ def menu_principal():
              print("OPCION NO VALIDA!!!")
 
 def precargar():
-    database = connexionDB()
-    print("bienvenidos a tu Agenda Telefonica, estos son los 10 contactos\n")
-    database.welcome_registro()
+     database = connexionDB()
+     print("bienvenidos a tu Agenda Telefonica, estos son los 10 contactos\n")
+     database.welcome_registro()
 
 
 
